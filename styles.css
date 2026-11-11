@@ -1,0 +1,164 @@
+    #vps {
+        color: white;
+        position: absolute;
+        z-index: 1;
+        left: 5vw
+    }
+    #title {
+        color: white;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+        z-index: 1;
+    }
+    #topheader {
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 0;
+        width: 100vw;
+        height: 100px;
+        position: absolute;
+        background-color: black;
+    }
+    #clicker {
+        width: 20vw;
+        height: 20vw;
+        border: solid;
+        background-color: green;
+        border-color: darkgreen;
+        border-radius: 50%;
+        position: absolute;
+        top: 30vh;
+        left: 40vw
+    }
+    body {
+        background-color: aqua;
+        margin: 0;
+        padding: 0;
+    }
+    #vapor {
+        color: white;
+        position: absolute;
+        right: 5vw;
+        z-index: 2;
+    }
+    #shop {
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        align-content: center;
+        position: absolute;
+        border-color: black;
+        background-color: seagreen;
+        gap: 10px;
+        right: 0;
+        bottom: 0px;
+        height: 100%;
+        width: 25vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #maincontent {
+        position: absolute;
+        height: calc(100vh - 100px);
+        width: 100vw;
+        background-color: aqua;
+        top: 100px;
+    }
+    .upgrades {
+        width: 22vw;
+        min-height: 15vh;
+        height: 15vh;
+        border-radius: 10px;
+        position: relative;
+        left: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        align-content: center;
+    }
+
+    #upgrade_1 {
+        border-radius: 10px;
+        background-color: skyblue;
+    }
+    #upgrade_1_img {
+        position: relative;
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+    }
+    button:hover {
+        filter: brightness(80%);
+    }
+    #upgrade_2 {
+        background-size: cover;
+        background-image: url(brick.jpeg);
+    }
+    .name {
+        position: relative;
+        top: 5px;
+    }
+    #upgrade_3 {
+        background-color: rgb(124, 176, 221);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        align-content: center;
+    }
+    #upgrade_4  {
+        background-color: orangered; 
+    }
+    #achevments {
+        position: absolute;
+        right: 15vw;
+        top: 15px;
+        width: 10vw;
+        height: 20%;
+        background-color: lightgray;
+    }
+    #achevementssidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        align-content: center;
+        position: absolute;
+        border: solid 2px black;
+        height: 100%;
+        width: 25vw;
+        bottom: 0;
+        background-color: red;
+    }
+    .achevements {
+    width: 22vw;
+    min-height: 15vh;
+    height: 15vh;
+    border-radius: 10px;
+    position: relative;
+    border: solid;
+    background-color: green;
+    left: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    align-content: center;
+    }
+    #rebirth {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        left: 25vh;
+        top: 5px;
+    }
+    #upgrade_5 {
+        background-color: green;
+    }
+    #upgrade_6 { 
+        background-color: forestgreen;
+    }

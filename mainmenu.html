@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main Menu</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+    <body>
+        <div id="evaporationinfo">
+            <h1 class="header">Evaporation</h1>
+            <ul>
+                <li>
+                    Evaporation is the process of water getting heated up and turned from liquid to a gas and it becomes water vapor
+                </li>
+            </ul>
+        </div>
+        <div id="title">
+            <h1>Welcome to our <a href="index.html"><strong>science project5</strong></a></h1>
+        </div>
+        <div id="buttons">
+            <button id="Game" onclick=window.location.href="index.html">game</button>
+            <button id="evaporation" class="information">evaporation</button>
+            <button id="transporation" class="information">transpiration</button> 
+            <button id="runoff" class="information">runoff</button>
+        </div>
+        <script>
+            const evap = document.getElementById("evaporation");
+            const einfo = document.getElementById("evaporationinfo");
+            einfo.style.display = "none";
+            evap.addEventListener("click", function() {
+                if (einfo.style.display === "none") {
+                        einfo.style.display = "flex";
+                }
+                else {
+                    einfo.style.display = "none";
+                }
+            });
+
+        </script>
+    </body>
+</html>

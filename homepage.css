@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-color: orange;
+}
+#buttons {
+    position: absolute;
+    top: 15vh;
+    gap: 10px;
+}
+#title {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    height: 15vh;
+    background-color: yellow;
+}
+#evaporationinfo {
+    height: 70vh;
+    width: calc(100vw - 10px);
+    position: absolute;
+    border: solid;
+    border-width: 5px;
+    border-color: cyan;
+    background-color : cadetblue;
+    bottom: 0px;
+    text-align: center;
+
+}
+#Game {
+    position: absolute;
+    right: 50%;
+}
