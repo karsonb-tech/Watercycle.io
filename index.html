@@ -6,36 +6,128 @@
         <link rel="stylesheet" href="homepage.css">
     </head>
     <body>
-        <div id="evaporationinfo">
+        <div id="evaporationinfo" class="information">
             <h1 class="header">Evaporation</h1>
-            <ul>
-                <li>
-                    Evaporation is the process of water getting heated up and turned from liquid to a gas and it becomes water vapor
-                </li>
-            </ul>
+            <p style="text-align: center;">
+                Evaporation is the process of water getting heated up and turned from liquid to a gas and it becomes water vapor
+                <br>
+                It works by when water gets heated it becomes water vapor.
+                <br>
+                Things that increase the speed of evaporation can be higher temperature, less humidity, more wind speed, and more surface area.
+                <br>
+                It matters since it's part of the water cycle and it can make clouds that cause shade and cools things down.
+                <br>
+            </p>
+            <p id="timer">10</p>
+        </div>
+        <div id="infiltrationinfo" class="information">
+            <h1 class="header">Infiltration</h1>
+            <p style="text-align: center;">
+                Infiltration is the process of water going into ground.
+                <br>
+                It works by water starting on the surface of the ground and soaking into the ground reaching deeper and deeper.
+                <br>
+                It works better on surfaces that are more permeable like mulch since it has more ways to flow into, so if it has a good permeable surface and that has ways to flow into there will be more infiltration.
+                <br>
+                This matters since if it goes into soil it can hydrate plants, stop flooding, and if it goes on to an impermeable surface there can be evaporation.
+            </p>
+        </div>
+        <div id="transpirationinfo" class="information">
+            <h1 class="header">Transpiration</h1>
+            <p style="text-align: center">
+                Transpiration is the process of water vapor coming out of stomata and leaves.
+                <br>
+                It works by carbon dioxide entering the stomata while water vapor and oxygen leaves.
+                <br>
+                Things that increase transpiration are heat.
+                <br>
+                It matters because we get oxygen from the process and that is something humans need.
+            </p>
         </div>
         <div id="title">
-            <h1>Welcome to our <a href="index.html"><strong>science project5</strong></a></h1>
+            <h1>Welcome to our <a href="game.html"><strong>science project</strong></a></h1>
         </div>
         <div id="buttons">
-            <button id="Game" onclick=window.location.href="mainmenu.html">game</button>
-            <button id="evaporation" class="information">evaporation</button>
-            <button id="transporation" class="information">transpiration</button> 
-            <button id="runoff" class="information">runoff</button>
+            <button id="Game" class="buttons" onclick=window.location.href="game.html">game</button>
+            <button id="evaporation" class="buttons">evaporation</button>
+            <button id="transporation" class="buttons">transpiration</button> 
+            <button id="infiltration" class="buttons">infiltration</button>
         </div>
         <script>
             const evap = document.getElementById("evaporation");
+            const inflt = document.getElementById("infiltration");
+            const trans = document.getElementById("transporation");
             const einfo = document.getElementById("evaporationinfo");
+            const iinfo = document.getElementById("infiltrationinfo");
+            const tinfo = document.getElementById("transpirationinfo");
+            const info = document.querySelectorAll(".information");
+            iinfo.style.display = "none";
             einfo.style.display = "none";
+            tinfo.style.display = "none";
             evap.addEventListener("click", function() {
                 if (einfo.style.display === "none") {
                         einfo.style.display = "flex";
+                        animatione.play();
+
                 }
                 else {
                     einfo.style.display = "none";
+
                 }
             });
-
+            inflt.addEventListener("click", function() {
+                if (einfo.style.display === "none" && iinfo.style.display ==="none" && tinfo.style.display === "none") {
+                    iinfo.style.display = "flex";
+                    console.log(iinfo.style.display);
+                    animationi.play();
+                }
+                else {
+                    if (einfo.style.display === "none") {
+                        iinfo.style.display = "none";
+                    }
+                }
+            });
+            trans.addEventListener("click", function() {
+                if (einfo.style.display === "none" && iinfo.style.display ==="none" && tinfo.style.display === "none") {
+                    tinfo.style.display = "flex";
+                    console.log(tinfo.style.display);
+                    animationt.play();
+                }
+                else {
+                        tinfo.style.display = "none";
+                }
+            });
+            const animatione = einfo.animate(
+                [
+                    { transform: "scale(1.2)" },
+                    { transform: "scale(1)" }
+                ],
+                {
+                    duration: 300,
+                    iterations: 1,
+                    
+                }
+            );
+            const animationi = iinfo.animate(
+                [
+                    { transform: "scale(1.2)" },
+                    { transform: "scale(1)" }
+                ],
+                {
+                    duration: 300,
+                    iterations: 1,
+                }
+            );
+            const animationt = tinfo.animate(
+                [
+                    { transform: "scale(1.2)" },
+                    { transform: "scale(1)" }
+                ],
+                {
+                    duration: 300,
+                    iterations: 1,
+                }
+            );
         </script>
     </body>
 </html>
