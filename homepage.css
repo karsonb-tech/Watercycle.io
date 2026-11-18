@@ -1,12 +1,27 @@
+:root {
+    --button-width: 5vw;
+}
 body {
     margin: 0;
-    background-color: orange;
+    min-height: 100vh;
+    background: linear-gradient(
+        to right,
+        orange,
+        yellow,
+        orange,
+        yellow,
+        orange
+    );
 }
-#buttons {
-    position: absolute;
-    top: 15vh;
-    gap: 10px;
+.buttons {
+    position: relative;
+    width: var(--button-width);
+    left: 30px;
+    column-gap: 3vw;
+    background-color: red;
+    width: fit-content;
 }
+
 #title {
     position: absolute;
     top: 0;
@@ -15,19 +30,45 @@ body {
     height: 15vh;
     background-color: yellow;
 }
-#evaporationinfo {
+.information {
+    border-radius: 5px;
     height: 70vh;
-    width: calc(100vw - 10px);
+    width: 100vw;
     position: absolute;
     border: solid;
     border-width: 5px;
     border-color: cyan;
-    background-color : cadetblue;
+    background: radial-gradient(
+        orange,
+        #4DA6FF,
+        red,
+        
+    );
     bottom: 0px;
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    align-content: center;
 }
 #Game {
     position: absolute;
     right: 50%;
+    
+}
+#buttons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    position: absolute;
+    top: 15vh;
+    height: 15vh;
+    width: 100vw;
+    column-gap: 30px;
+    background: radial-gradient(
+        skyblue,
+        gray
+
+    );
 }
